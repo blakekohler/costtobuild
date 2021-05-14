@@ -1,0 +1,100 @@
+.footer{
+   margin: -8px;
+   font-family: 'Poppins', sans-serif;
+}
+
+.newsLetterRow{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: #f5bf23;
+    margin-top: 150px;
+}
+
+.footerMainRow{
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copywriteRow{
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: #c8c8c8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: small;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.logo{
+    width: 200px;
+}
+
+
+.subscribeHeader{
+    padding: 0;
+    margin: 0;
+}
+
+.newsletterInput{
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+.newsletterInput::placeholder{
+    color: white;
+}
+
+.newsLetterForm{
+    float: right;
+    margin-top: -50px;
+    display: flex;
+}
+
+.submitButton{
+    background-color: #222;
+    border-left: solid 1px #f5bf23;
+    width: 50px;
+    color: #f5bf23;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoColumn, .contactUsColumn, .LinkColumn{
+    height: 300px;
+    padding-top: 20px;
+    display:flex;
+    flex-direction: column;
+
+}
+
+.contactUsHeader{
+    text-transform: uppercase;
+}
+
+.linkHeader{
+    text-transform: uppercase;
+}
+
+.address, .phone, .email{
+    text-transform: uppercase;
+}
+
+.linkRow{
+    text-transform: uppercase;
+}
+
+.linkRow > a{
+    text-decoration: none;
+    color: #222;
+}

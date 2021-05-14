@@ -1,0 +1,334 @@
+.darkHouse{
+    background: url('../images/house.jpg');
+    margin-left: -8px;
+    margin-right: -8px;
+    min-height: 300px;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 20px;
+}
+.heroText{
+   padding-top: 90px;
+   height: 100%;
+}
+
+.heroText > h1{
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    line-height: 79px;
+    border-width: 0px;
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    width: 100%;
+    letter-spacing: 0px;
+    font-weight: 700;
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .heroText > h1{
+        font-size: 50px;
+    }
+  }
+
+.heroText > h3{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 31px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 8px;
+    padding-left: 7px;
+    color: #222;
+    max-width: 940px;
+    letter-spacing: 0px;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: #f5bf23;
+}
+
+.calcHolder{
+    background: url('../images/plans.png');
+    padding-left: 15%;
+    padding-right: 15%;
+    min-height: 411px;
+    height: 100%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background-size: cover;
+    background-position: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-wrap: wrap;
+    
+}
+
+.iconHolder{
+    display:flex;
+    justify-content: center;
+}
+
+.calc{
+    box-shadow: 0px 1px 4px 1px #00000021;
+    width: 265px;
+    min-width: 265px;
+    background-color: #f6f7f8;
+    margin-left: 10px;
+    padding: 25px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: solid 2px #f5bf23;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+}
+
+.calcIcon{
+    background-color: #222;
+    color: #f5bf23;
+    border-radius: 50px;
+    width: 100px;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xxx-large;
+
+}
+
+.calcHeader{
+    text-transform: uppercase;
+}
+
+.calcActionRow{
+    text-transform: uppercase;
+    background-color:#f5bf23;
+}
+
+.calcAction{
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    color: #222;
+    font-size: 14px;
+    padding: 15px 12px;
+    cursor: pointer;
+    margin: -10px;
+    font-weight: 600;
+}
+
+.calc:hover{
+    transform: scale(1.1);
+    transition: all 0.2s linear;
+}
+
+.free{
+    color: white;
+    font-weight: 900;
+    -webkit-text-stroke: 1px whi;
+}
+
+.ourPlans{
+    background-image: url('../images/dotback.png');
+    background-color: #141414;
+    padding-left: 15%;
+    padding-right: 15%;
+    min-height: 400px;
+    height: 100%;
+    padding-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+    margin: -8px;
+}
+
+.ourPlans > h2 {
+    color: #f5bf23;
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 70px;
+    text-transform: uppercase;
+}
+
+.planPic{
+    width: 100%;
+   
+}
+.planList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.plan{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.details{
+    padding-left: 20px;
+}
+
+.details > h4{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: x-large;
+    margin: 0;
+}
+
+.viewPlan{
+    background-color: #f5bf23;
+    color: #222;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    margin-top: 14px;
+    cursor: pointer;
+}
+
+.bed > svg, .bath > svg{
+   margin-right: 10px;
+}
+
+
+.sectionHeader{
+    white-space: nowrap;
+   
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .yellowHeader {
+        margin-left: -20px;
+    }
+  }
+
+
+  .blogHolder, .services{
+      padding-left: 15%;
+      padding-right: 15%;
+      font-family: 'Poppins', sans-serif;
+  }
+
+  .blogHolder> h2{
+    color: #222;
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 70px;
+    text-transform: uppercase;
+  }
+
+  .yellow{
+    color:#f5bf23;
+}
+.white{
+    color: white;
+}
+
+.blogRow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blog{
+    background-color: #222;
+    color: white;
+    border: solid 1px #f5bf23;
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.blogImg > img{
+    width: 100%;
+}
+
+.blogInfo{
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.author{
+    text-transform: uppercase;
+    font-size: small;
+}
+
+.description{
+    font-size: small;
+    padding-bottom: 10px;
+}
+
+.readMore > a{
+    color: #f5bf23;
+}
+.serviceRow{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    justify-content: space-evenly;
+    background: url('../images/bg-map.png');
+
+}
+.service{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.serviceIcon{
+    display: flex;
+    justify-content: center;
+}
+
+.serviceIcon > img{
+width: 50px;
+}
+
+.serviceLink{
+    text-transform: uppercase;
+    background-color: #f5bf23;
+    color: #222;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    margin-top: 14px;
+    cursor: pointer;
+   
+}
+
+.serviceDescription{
+    font-size: small;
+}
+
+.serviceHeader{
+    font-size: large;
+    
+}

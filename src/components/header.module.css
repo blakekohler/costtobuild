@@ -1,0 +1,94 @@
+.topNav{
+
+    margin: -8px;
+   
+    font-family: 'Poppins', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 200px;
+}
+.navRow{
+    display: flex;
+    padding-top: 10px;
+    padding-left: 15%;
+padding-right: 15%;
+padding-bottom: 20px;
+justify-content: space-between;
+align-items: center;
+}
+.nav > ul {
+    list-style: none;
+    margin: 0;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    
+}
+
+.nav > ul > li {
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+    margin: -10px 0;
+    padding: 10px 0;
+    float: left;
+}
+
+.nav > ul > li > a{
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    color: #222;
+    font-size: 14px;
+    padding: 35px 12px;
+    cursor: pointer;
+    margin: -10px 0;
+    font-weight: 600;
+}
+
+.grayHeader{
+    display: flex;
+    justify-content: space-between;
+    background-color: #eeeeee;
+    padding-left: 15%;
+padding-right: 15%;
+height: 37px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 12px;
+color: #222;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 1px;
+}
+
+.yellowCallOut{
+    background-color: #F5BF23;
+    font-size: 12px;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .nav, .grayHeader{
+        display: none;
+    }
+    .navRow{
+        padding-left: 5%;
+    }
+  }

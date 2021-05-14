@@ -1,0 +1,67 @@
+.secondaryHeader{
+    font-family: 'Poppins', sans-serif;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: #222;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    margin: -8px;
+}
+
+.blogList{
+    margin-top: 100px;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    flex-wrap:wrap;
+    font-family: 'Poppins', sans-serif;
+    justify-content: flex-start;
+    color: #222;
+}
+
+.blogItem{
+flex: 1;
+max-width: 280px;
+min-width: 260px;
+margin: 10px;
+}
+
+.blogCover{
+    width: 100%;
+}
+
+.blogCat{
+    text-transform: uppercase;
+    font-size: small;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: gray;
+}
+
+.blogHeader{
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.blogDescription{
+    margin-top: 10px;
+    font-size: small;
+    font-weight: 300;
+}
+
+.readMore {
+    color: #f5bf23;
+    font-size: small;
+}
+
+.pagination{
+    display: flex;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    justify-content: space-between;
+    margin-top: 50px;
+}

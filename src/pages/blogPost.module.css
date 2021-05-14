@@ -1,0 +1,33 @@
+.secondaryHeader{
+    font-family: 'Poppins', sans-serif;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: #222;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    margin: -8px;
+}
+
+.blog{
+    padding-left: 15%;
+    padding-right: 15%;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 40px;
+}
+
+.hero{
+    width: 100%;
+}
+
+.infoRow{
+    text-transform: uppercase;
+    font-size: small;
+    margin-top: 5px;
+}
+
+.content > blockquote {
+    background-color: #222;
+    color: #f5bf23;
+    padding: 20px;
+}
