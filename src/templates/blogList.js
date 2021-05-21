@@ -3,7 +3,7 @@ import * as style from './blogList.module.css'
 import Header from '../components/header';
 import Footer from "../components/footer";
 import { Link, graphql } from "gatsby"
-import { graphql } from 'gatsby'
+import SEO from '../components/seo'
 
 const Blog  = (props) => {
 
@@ -21,7 +21,7 @@ const Blog  = (props) => {
       <h2>Cost To Build Blog</h2>
   </div>
   <div className={style.blogList}>
-  {posts.map(p => {
+  {posts.map(p => { return (
           <Link className={style.blogItem} to={'/blogpost/' + p.slug} > 
 
           
@@ -34,7 +34,7 @@ const Blog  = (props) => {
               </div>
               <a  className={style.readMore}>Read More › </a>
               </Link>
-  })
+  )})
   } 
       </div>
       <div className={style.pagination}>{!isFirst && (

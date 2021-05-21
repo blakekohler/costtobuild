@@ -3,7 +3,8 @@ import * as style from './blogPost.module.css'
 import Header from '../components/header';
 import Footer from "../components/footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
+import SEO from '../components/seo'
 
 
 const BlogPost  = ({ data }) => {
