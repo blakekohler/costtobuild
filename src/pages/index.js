@@ -29,7 +29,7 @@ const IndexPage = () => {
        </div>
      </div>
      <div className={style.calcHolder}>
-       <a className={style.calc}>
+       <a href="/calc" className={style.calc}>
          <div className={style.iconHolder}>
          <div className={style.calcIcon}>
          <FontAwesomeIcon icon={faHome} />

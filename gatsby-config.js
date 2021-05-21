@@ -34,6 +34,14 @@ module.exports = {
         // For all the options check babel-plugin-react-css-modules README link provided above
       },
     },
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `6tl35cj995hv`,
+        accessToken: `5yv2zMwHJfQZv545oGzlR9zDNGV28ZFIGKRUzeGW41Y`
+      }
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {

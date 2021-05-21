@@ -1,0 +1,148 @@
+.calcHolder{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.secondaryHeader{
+    font-family: 'Poppins', sans-serif;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: #222;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    margin: -8px;
+}
+
+.breadcrumbs{
+    display: flex;
+    list-style: none;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  
+
+}
+
+.breadcrumb{
+    font-family: 'Poppins', sans-serif;
+    float: right;
+    background-color: #eeeeee;
+    color: #222;
+    text-transform: uppercase;
+    margin: 5px;
+    padding: 10px;
+    padding-left: 35px;
+    height: 20px;
+    font-size: small;
+    position: relative;
+    white-space: nowrap;
+}
+
+.active{
+    background-color: #f5bf23;
+}
+
+.active:after{
+    border-left: 20px solid #f5bf23 !important;
+}
+
+
+.breadcrumb:after{
+    content: "";
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #eeeeee;
+    position: absolute;
+    right: -20px;
+    top: 0px;
+    z-index: 999;
+}
+
+.breadcrumb:before{
+    content: "";
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid white;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.breadcrumb:first-child:before {
+	display: none; 
+}
+
+.breadcrumb:last-child:after {
+	display: none; 
+}
+
+.intro{
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+    font-size: large;
+}
+.calcSectionTitle{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: #222;
+} 
+
+.subSection{
+    background-color: #eeeeee;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    margin: 10px;
+}
+.calcSubTitle{
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0
+}
+
+.inputRow{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.numbInput{
+    padding: 5px;
+}
+
+.explainerText{
+    font-size: small;
+}
+
+.example{
+    font-size: small;
+    text-transform: uppercase;
+    cursor: pointer;
+    color:#f5bf23;
+}
+
+.radioInput{
+padding-left: 5px;
+}
+.radioLabel{
+    padding-left: 5px;
+}
+
+.button{
+    background-color: #f5bf23;
+    color: #222;
+    padding: 20px;
+    font-size: large;
+    font-weight: 700;
+    width: 300px;
+    margin: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.buttonRow{
+    display: flex;
+    justify-content: space-between;
+}
