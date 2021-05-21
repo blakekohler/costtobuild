@@ -3,6 +3,7 @@ import * as style from './blogList.module.css'
 import Header from '../components/header';
 import Footer from "../components/footer";
 import { Link, graphql } from "gatsby"
+import { graphql } from 'gatsby'
 
 const Blog  = (props) => {
 
@@ -54,3 +55,37 @@ const Blog  = (props) => {
 </div>;
 };
 export default Blog
+
+
+export const blogListQuery = graphql`
+  query blogListQuery($skip: Int!, $limit: Int!) {
+    allContentfulBlog(sort: {fields: [publishDate], order: DESC}, limit: $limit, skip: $skip) {
+      nodes {
+        publishDate
+        description {
+          description
+        }
+        title
+        heroImage {
+          file {
+            url
+          }
+        }
+        author {
+          name
+          title
+          image {
+            file {
+              url
+            }
+          }
+        }
+        slug
+        body {
+          childMarkdownRemark {
+            excerpt(pruneLength: 400)
+          }
+        }
+      }
+    }
+  }`
