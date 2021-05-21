@@ -51,11 +51,6 @@ export const pageQuery = graphql`
     {
       title
       author {
-        image{
-          file{
-            url
-          }
-        }
         name
         title
       }
@@ -91,11 +86,6 @@ export const pageQuery = graphql`
           }
           author {
             name
-            image {
-              file {
-                url
-              }
-            }
             title
             id
           }

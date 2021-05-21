@@ -74,11 +74,6 @@ export const blogListQuery = graphql`
         author {
           name
           title
-          image {
-            file {
-              url
-            }
-          }
         }
         slug
         body {
