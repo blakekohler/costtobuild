@@ -27,7 +27,7 @@ const BlogPost  = ({ data }) => {
 
           <div className={style.content} dangerouslySetInnerHTML={{
     __html: body.childMarkdownRemark.html,
-  }}> </div>
+  }}></div>
  <br></br>
  <hr></hr>
  <div className={style.buttonholder}>
