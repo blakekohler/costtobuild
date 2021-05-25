@@ -26,7 +26,7 @@ const Blog  = (props) => {
 
           
               <img className={style.blogCover} src={p.heroImage.file.url}/>
-              <div className={style.blogCat}>Contruction Updates</div>
+              <div className={style.blogCat}>f</div>
               <div className={style.blogHeader}>{p.title} </div>
               <div className={style.blogCat}></div>
               <div className={style.blogDescription}>
