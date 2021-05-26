@@ -99,3 +99,23 @@
     text-decoration: none;
     color: #222;
 }
+
+
+@media only screen and (max-width: 600px) {
+
+    .newsLetterForm{
+        float: none;
+        margin-top: 16px;
+        display: flex;
+    }
+
+
+    .logoColumn, .contactUsColumn, .LinkColumn{
+        height: 100%;
+        padding-bottom: 20px;
+        
+    
+    }
+}
+
+
