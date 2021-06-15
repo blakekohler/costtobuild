@@ -93,6 +93,7 @@
     cursor: pointer;
     transition: all 0.2s linear;
     text-decoration: none;
+    color: #222;
 
 }
 
@@ -301,6 +302,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 50px;
 }
 .serviceIcon{
     display: flex;
@@ -333,3 +335,36 @@ width: 50px;
     font-size: large;
     
 }
+
+
+@media only screen and (max-width: 600px) {
+    .sectionHeader {
+      font-size: large !important;
+    }
+
+    .calc{
+        min-width: 100%;
+    }
+
+.heroText{
+    padding-top: 0;
+}
+
+    .heroText > h1{
+        text-align: center;
+        padding-top: 20px;
+        font-size: xx-large;
+        line-height: 40px;
+    }
+
+
+    .ourPlans, .blogHolder{
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .serviceRow{
+        padding-bottom: 0px;
+    }
+    
+  }
