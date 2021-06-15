@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import style from "./cookiePopup.module.css"
+
 const CookiePopup  = () => {
     const [hide, setHide] = useState(true);
     const handleClose = () => {
