@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import style from "./cookiePopup.module.css"
+import * as style from './cookiePopup.module.css'
 
 const CookiePopup  = () => {
     const [hide, setHide] = useState(true);
