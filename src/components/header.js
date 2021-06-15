@@ -1,7 +1,7 @@
 import React from 'react';
 import * as style from "./header.module.css"
 import logo from '../images/logo-yellow.png';
-
+import CookiePopup from './cookiePopup';
 const Header  = () => {
   return <div className={style.topNav}>
       <div className={style.grayHeader}>
@@ -19,7 +19,7 @@ const Header  = () => {
     </ul>
 </nav>
       </div>
-
+<CookiePopup></CookiePopup>
 </div>;
 };
 export default Header
