@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>House Cost Estimator | Cost to Build a Home</title>
+	<link rel="icon" type="image/png" href="images/ctb_icon.png">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style/ctb-4.css" type="text/css" />
+	<script type="text/javascript" src="CostEstFlds.json"></script>
+  <script type="text/javascript" src="ulink/users.json"></script>  
+  <script type="text/javascript" src="gn.js"></script>
+</head>
+<body >
+<noscript><p><H1>This site requires a browser that support JavaScript</H1></p><p></p></noscript>
+<div style="width: 100%; height: 6px; padding: 0px; margin-top: 0px; background-color: #092334;"></div>
+<div class="container">
+<div id="header">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html"><font style="font-size:40px; color: green;"><b>COST</b> to <b>BUILD</b></font></a>
+    </div>
+    <div class="topnav collapse navbar-collapse" id="mainNav">
+      <ul class="nav navbar-nav">
+        <li ><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Calculator
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+				<li class="active"><a href="calculator.html">House</a></li>             
+            <li ><a href="input1_garage.html">Garage</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li ><a href="advertise.html">Advertise on CTB</a></li>
+            <li ><a href="link_info.html">Link Your Plans to CTB</a></li> 
+          </ul>
+        </li>
+        <li ><a href="help.html">Help</a></li>
+        <li ><a href="about.html">About</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+<script>SetUser();</script>
+<script>
+function InerOnLoad(sys){
+sys.PageName="input7";
+InitFrm(["bath_cust","bath_cust_shower_sf","bath_full","bath_3_4","bath_1_2","bath_grade"]);
+  }
+</script>
+
+<div class="row calc_main">
+<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 text-center side_menu">
+<nav >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sideNav" >
+        <span class="icon-bar" style="background-color: #092334"></span>
+        <span class="icon-bar"style="background-color: #092334"></span>
+        <span class="icon-bar"style="background-color: #092334"></span>                        
+      </button>
+      <h2 class="visible-xs">Bathrooms</h2>
+    </div>
+    <div class="topnav collapse navbar-collapse" id="sideNav">
+      <ul class="nav navbar-nav">
+        <li ><a type="button" class="btn btn-default side-buttons" href="calculator.html">1 Main Floor</a></li>
+        <li ><a id="input2" type="button" class="btn btn-default side-buttons" >2 General</a></li>
+        <li ><a id="input3" type="button" class="btn btn-default side-buttons" >3 Basement</a></li>
+        <li ><a id="input4" type="button" class="btn btn-default side-buttons" >4 Garage</a></li>
+        <li ><a id="input5" type="button" class="btn btn-default side-buttons" >5 Upper Floors</a></li>
+        <li ><a id="input6" type="button" class="btn btn-default side-buttons" >6 Kitchens</a></li>
+        <li ><a id="input7" type="button" class="btn btn-default side-buttons" style="background-color: rgb(181, 181, 181)" >7 Bathrooms</a></li>
+        <li ><a id="input8" type="button" class="btn btn-default side-buttons" >8 Finishes</a></li>
+        <li ><a id="input9" type="button" class="btn btn-default side-buttons" >9 Other</a></li>
+        <li ><a id="input10" type="button" class="btn btn-default side-buttons" >10 Site Index</a></li>
+        <li ><a id="estimator" type="button" class="btn btn-default side-buttons" >11 Summary</a></li>
+       </ul>
+    </div>
+  </div>
+</nav>
+	<div id="Ad3"></div>
+</div>
+<div class="clearfix visible-xs"></div>
+
+<!-- Main -->
+
+<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
+	<div class="text-center" style="width: 100%; ">
+		<h2 class="visible-sm visible-md visible-lg">Bathrooms</h2>
+	</div>
+	
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12 col-md-7">
+				<div class="row">
+					<div class="col-xs-7 col-sm-7 col-md-12">
+						<h3>How many Custom Bathrooms in your home:</h3>
+					</div>			
+					<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal0">					
+							<img src="images/custbath.jpg" alt="Custom Bathroom" class="help_img_t img-rounded"/>
+								<div style="bottom: 0" class="caption post-content">
+                				<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               			</div>
+               	</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<input type="text" id="bath_cust"/><br>
+					</div>
+				</div>
+  				<div>
+					<help>Custom bathrooms have a large tub and a separate shower, they also have double vanity sinks. Often times the master bathroom will fit in this category.</help>
+				</div>
+			</div>
+			<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal0">
+					<img src="images/custbath.jpg" alt="Custom Bathroom" class="help_img img-rounded" />
+						<div style="bottom: 0" class="caption post-content">
+                		<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               	</div>
+				</button>				
+			</div>
+		</div>
+			</div><br>
+  <div class="modal" id="myModal0" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+    	<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Custom Bathroom</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/custbath.jpg" class="img-responsive">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+  </div>		
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12">
+				<h3>Enter size of shower for custom bathroom:</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<input type="text" id="bath_cust_shower_sf"/><b>sf</b><br>
+			</div>
+		</div>
+  		<div>
+			<help>Often times there will be a separate shower in a custom bathroom. The smallest shower would be 9 square feet. Most showers are in the range of 16 to 20 square feet, but could be as large as you would like it to be.</help>
+		</div>				
+		<div id="Ad1"></div>
+			</div><br>
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12 col-md-7">
+				<div class="row">
+					<div class="col-xs-7 col-sm-7 col-md-12">
+						<h3>How many full bathrooms in your home:</h3>
+					</div>			
+					<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">					
+							<img src="images/fullbath.jpg" alt="Full Bathroom" class="help_img_t img-rounded"/>
+								<div style="bottom: 0" class="caption post-content">
+                				<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               			</div>
+               	</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<input type="text" id="bath_full"/><br>
+					</div>
+				</div>
+  				<div>
+					<help>A full bathroom will have a tub/shower, sink and toilet.</help>
+				</div>
+			</div>
+			<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">
+					<img src="images/fullbath.jpg" alt="Full Bathroom" class="help_img img-rounded" />
+						<div style="bottom: 0" class="caption post-content">
+                		<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               	</div>
+				</button>				
+			</div>
+		</div>
+			</div><br>
+  <div class="modal" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+    	<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Full Bathroom</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/fullbath.jpg" class="img-responsive">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+  </div>		
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12 col-md-7">
+				<div class="row">
+					<div class="col-xs-7 col-sm-7 col-md-12">
+						<h3>How many 3/4 bathrooms in your home:</h3>
+					</div>			
+					<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal3">					
+							<img src="images/3_4-bath.jpg" alt="3/4 Bath" class="help_img_t img-rounded"/>
+								<div style="bottom: 0" class="caption post-content">
+                				<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               			</div>
+               	</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<input type="text" id="bath_3_4"/><br>
+					</div>
+				</div>
+  				<div>
+					<help>A 3/4 bathroom will have a shower a sink and toilet.</help>
+				</div>
+			</div>
+			<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal3">
+					<img src="images/3_4-bath.jpg" alt="3/4 Bath" class="help_img img-rounded" />
+						<div style="bottom: 0" class="caption post-content">
+                		<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               	</div>
+				</button>				
+			</div>
+		</div>
+				<div id="Ad2"></div>
+		</div><br>
+  <div class="modal" id="myModal3" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+    	<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">3/4 Bath</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/3_4-bath.jpg" class="img-responsive">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+  </div>		
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12 col-md-7">
+				<div class="row">
+					<div class="col-xs-7 col-sm-7 col-md-12">
+						<h3>How many 1/2 bathrooms in your home:</h3>
+					</div>			
+					<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal4">					
+							<img src="images/halfbath.jpg" alt="Half Bathroom" class="help_img_t img-rounded"/>
+								<div style="bottom: 0" class="caption post-content">
+                				<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               			</div>
+               	</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<input type="text" id="bath_1_2"/><br>
+					</div>
+				</div>
+  				<div>
+					<help>A 1/2 bath will just have a sink and a toilet. A 1/2 bath is often used in areas away from bedrooms, such as a main floor without bedrooms or maybe in a mudroom area.</help>
+				</div>
+			</div>
+			<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal4">
+					<img src="images/halfbath.jpg" alt="Half Bathroom" class="help_img img-rounded" />
+						<div style="bottom: 0" class="caption post-content">
+                		<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               	</div>
+				</button>				
+			</div>
+		</div>
+			</div><br>
+  <div class="modal" id="myModal4" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+    	<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Half Bathroom</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/halfbath.jpg" class="img-responsive">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+  </div>		
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12">
+				<h3>Select your Bathroom Grade:</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="bath_grade"></div><br>
+			</div>
+		</div>
+  		<div>
+			<help><b>Grade 1</b> would be the lowest grade, typically fiberglass tubs and showers with lower end fixtures.<br><b>Grade 2</b> is a step up from grade 1 with higher end fiberglass tubs and showers and medium grade fixtures.<br><b>Grade 3</b> is more of the medium grade. This includes a cast iron tub and a tile or cultured marble finish for the tub surround.<br><b>Grade 4</b> would be similar to grade 3, but the tub surround would be of a higher grade as would the fixtures.<br><b>Grade 5</b> would be the highest grade, typically natural tile or similar finishes for showers and around tubs with the highest grade fixtures.</help>
+		</div>				
+			</div><br>
+
+<a type="button" class="btn btn-primary btn-lg btn-next" href="input6.html">Prev</a>	
+<a type="button" class="btn btn-primary btn-lg btn-next" href="input8.html">NEXT</a>
+		
+<a type="button" class="btn btn-primary btn-lg btn-next" id="EndCalc">CALCULATE</a>
+
+</div>
+<div id="power_by" class="text-center">
+<a href="http://www.crookstondesigns.com/plans.html"><b>Choose a pre-entered plan from Crookston Custom Designs</b></a>
+</div>
+</div>
+<!-- End Main --><br>
+<div id="footer" class="footer">
+      <h4>&copy; 2019 Cost To Build LLC &nbsp;<a href="privacypolicy.html">Privacy Policy</a> 
+      <a style="float:right;" href="http://crookstondesigns.com" target="_blank">Crookston Custom Designs</a></h4>
+</div>
+</div>
+<script>SetUserFooter();</script>
+</body></html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65913035-1', 'auto');
+  ga('send', 'pageview');
+
+</script><div id="addholder" style="display: none;">
+	<div id="HoldAd1" class="ad_hold">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- house_input_resp_1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5476550292839038"
+     data-ad-slot="8094576717"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+	<div id="HoldAd2" class="ad_hold">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- house_input_resp_2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5476550292839038"
+     data-ad-slot="4861908718"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+	<div id="HoldAd3" class="ad_hold">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- house_input_resp_3 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5476550292839038"
+     data-ad-slot="6338641918"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+</div>
+<script>
+function MovE(N,E){
+_.ER(E.parentNode,E);
+_.EA(N,E);
+}
+MovE(_.E("Ad1"),_.E("HoldAd1"));
+MovE(_.E("Ad2"),_.E("HoldAd2"));
+MovE(_.E("Ad3"),_.E("HoldAd3"));
+</script>

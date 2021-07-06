@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65913035-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-65913035-1');
+        </script>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Upper Floors | Garage Cost Calculator</title>
+	<link rel="icon" type="image/png" href="images/ctb_icon.png">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style/ctb-4.css" type="text/css" />
+	<script type="text/javascript" src="CostEstFlds_garage.json"></script><script type="text/javascript" src="gn.js"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5476550292839038",
+          enable_page_level_ads: true
+		});
+	</script>
+</head>
+<body >
+<noscript><p><H1>This site requires a browser that support JavaScript</H1></p><p></p></noscript>
+<div style="width: 100%; height: 6px; padding: 0px; margin-top: 0px; background-color: #092334;"></div>
+<div class="container">
+<div id="header">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html"><font style="font-size:40px; color: green;"><b>COST</b> to <b>BUILD</b></font></a>
+    </div>
+    <div class="topnav collapse navbar-collapse" id="mainNav">
+      <ul class="nav navbar-nav">
+        <li ><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Calculator
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+				<li ><a href="calculator.html">House</a></li>             
+            <li ><a href="input1_garage.html">Garage</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li ><a href="advertise.html">Advertise on CTB</a></li>
+            <li ><a href="link_info.html">Link Your Plans to CTB</a></li> 
+          </ul>
+        </li>
+        <li ><a href="help.html">Help</a></li>
+        <li ><a href="about.html">About</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+<script>
+  function InerOnLoad(sys){
+  sys.PageName="input3_garage";
+  InitFrm(["dg_loft","dg_loft_sf","dg_loft_height","dg_floor2","dg_floor2_sf","dg_floor2_height","dg_finish_grade"]);
+  }
+</script>
+
+<div class="row calc_main">
+  <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 text-center side_menu">
+    <div id="Ad3">
+      <h3 style="color: green;">Answer the questions to get a detailed cost summary for a new Garage.</h3>
+    </div>
+
+    <nav >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sideNav" >
+        <span class="icon-bar" style="background-color: #092334"></span>
+        <span class="icon-bar" style="background-color: #092334"></span>
+        <span class="icon-bar" style="background-color: #092334"></span>                        
+      </button>
+      <h2 class="visible-xs">Upper Floors</h2>
+    </div>
+    <div class="topnav collapse navbar-collapse" id="sideNav">
+      <ul class="nav navbar-nav">
+        <li ><a type="button" class="btn btn-default side-buttons" href="input1_garage.html" >1 General</a></li>
+        <li ><a id="input2_garage" type="button" class="btn btn-default side-buttons" >2 Structure</a></li>
+        <li ><a id="input3_garage" type="button" class="btn btn-default side-buttons" style="background-color: rgb(181, 181, 181)">3 Upper Floors</a></li>
+        <li ><a id="input4_garage" type="button" class="btn btn-default side-buttons" >4 Finishes</a></li>
+        <li ><a id="input5_garage" type="button" class="btn btn-default side-buttons" >5 Site Index</a></li>
+        <li ><a id="est_garage" type="button" class="btn btn-default side-buttons" >6 Summary</a></li>
+       </ul>
+    </div>
+  </div>
+</nav>
+
+  </div>
+  <div class="clearfix visible-xs"></div>
+
+  <!-- Main -->
+
+  <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
+    <div class="text-center" style="width: 100%; ">
+      <h2 class="visible-sm visible-md visible-lg">Upper Floors</h2>
+    </div>
+
+    <div class="calc-input">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Will your Garage have Loft area:</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="dg_loft"></div>
+        </div>
+      </div>
+      <div>
+        <help>Sometimes Garages have living area which is built into the roof.  This usualy called a Loft.</help>
+      </div>
+    </div>
+    <br/>
+
+      <div class="calc-input">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>What is the living area of the Loft:</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <input type="text" id="dg_loft_sf" /><b>sf</b>
+          </div>
+        </div>
+        <div>
+          <help></help>
+        </div>
+      </div>
+      <br/>
+
+    <div class="calc-input">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>What is the ceiling height of the Loft:</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="dg_loft_height"></div>
+        </div>
+      </div>
+      <div>
+        <help></help>
+      </div>
+    </div>
+    <br/>
+
+    <div class="calc-input">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Will your Garage have a second floor:</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="dg_floor2"></div>
+        </div>
+      </div>
+      <div>
+        <help>
+          Select Second Floor if you will have a full second floor above your garage with full height walls on the sides.
+        </help>
+      </div>
+    </div>
+    <br/>
+
+    <div class="calc-input">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>What is the living area of the Second Floor:</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="text" id="dg_floor2_sf" /><b>sf</b>
+          <b>sf</b>
+        </div>
+      </div>
+      <div>
+        <help></help>
+      </div>
+    </div>
+    <br/>
+
+    <div class="calc-input">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>What is the ceiling height of the Second Floor:</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="dg_floor2_height"></div>
+        </div>
+      </div>
+      <div>
+        <help></help>
+      </div>
+    </div>
+    <br/>
+
+    <div class="calc-input">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Select the grade Level for your Interior trim:</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="dg_finish_grade"></div>
+        </div>
+      </div>
+      <div>
+        <help>
+There are five grade levels for the interior trim.  This only applies if the interior will be finished.<br/>
+<b>Grade 1</b> is the lowest level. This will include the most basic trim; baseboard and door trim. All trim will be painted.<br/>
+<b>Grade 2</b> is similar to grade 1, but will include chair molding in approximately 25% of the house. All trim will be painted.<br/>
+<b>Grade 3</b> is a step up from grade 2 and will include crown molding in 25% of the house; all windows will be trimmed. All trim will be painted.<br/>
+<b>Grade 4</b> is a step up from grade 3. This will include crown molding in approximately half of the living area and chair molding throughout. Some of the trim may be stain grade, most will be painted.<br/>
+<b>Grade 5</b> is the highest grade. This will include crown molding and chair molding throughout the home. All of the trim will be stain grade.
+        </help>
+      </div>
+    </div>
+    <br/>
+    
+          <div class="calc-input">
+            <a type="button" class="btn btn-primary btn-lg btn-next" href="input2_garage.html">PREV</a>
+            <a type="button" class="btn btn-primary btn-lg btn-next" href="input4_garage.html">NEXT</a>
+            <a type="button" class="btn btn-primary btn-lg btn-next" id="EndCalc">CALCULATE</a>
+
+            <div id="power_by" class="text-center">
+              <a href="http://www.crookstondesigns.com/plans.html">
+                <b>Choose a pre-entered plan from Crookston Custom Designs</b>
+              </a>
+            </div>
+          </div>
+        </div>
+</div>
+
+<!-- End Main -->
+<br>
+  <div id="footer" class="footer">
+    <h4>
+      &copy; 2019 Cost To Build LLC &nbsp;<a href="privacypolicy.html">Privacy Policy</a>
+      <a style="float:right;" href="http://crookstondesigns.com" target="_blank">Crookston Custom Designs</a>
+    </h4>
+  </div>
+</div>
+</body>
+</html>

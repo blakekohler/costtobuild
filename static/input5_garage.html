@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65913035-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-65913035-1');
+        </script>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Build Location | Garage Cost Calculator</title>
+	<link rel="icon" type="image/png" href="images/ctb_icon.png">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style/ctb-4.css" type="text/css" />
+	<script type="text/javascript" src="CostEstFlds_garage.json"></script><script type="text/javascript" src="gn.js"></script><script type="text/javascript" src="LocCostIdx.json"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5476550292839038",
+          enable_page_level_ads: true
+		});
+	</script>
+</head>
+<body onload="nwcLoad()">
+<noscript><p><H1>This site requires a browser that support JavaScript</H1></p><p></p></noscript>
+<div style="width: 100%; height: 6px; padding: 0px; margin-top: 0px; background-color: #092334;"></div>
+<div class="container">
+<div id="header">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html"><font style="font-size:40px; color: green;"><b>COST</b> to <b>BUILD</b></font></a>
+    </div>
+    <div class="topnav collapse navbar-collapse" id="mainNav">
+      <ul class="nav navbar-nav">
+        <li ><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Calculator
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+				<li ><a href="calculator.html">House</a></li>             
+            <li ><a href="input1_garage.html">Garage</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li ><a href="advertise.html">Advertise on CTB</a></li>
+            <li ><a href="link_info.html">Link Your Plans to CTB</a></li> 
+          </ul>
+        </li>
+        <li ><a href="help.html">Help</a></li>
+        <li ><a href="about.html">About</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+
+
+<div class="row calc_main">
+  <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 text-center side_menu">
+    <div id="Ad3"></div>
+
+    <nav >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sideNav" >
+        <span class="icon-bar" style="background-color: #092334"></span>
+        <span class="icon-bar" style="background-color: #092334"></span>
+        <span class="icon-bar" style="background-color: #092334"></span>                        
+      </button>
+      <h2 class="visible-xs">Build Location</h2>
+    </div>
+    <div class="topnav collapse navbar-collapse" id="sideNav">
+      <ul class="nav navbar-nav">
+        <li ><a type="button" class="btn btn-default side-buttons" href="input1_garage.html" >1 General</a></li>
+        <li ><a id="input2_garage" type="button" class="btn btn-default side-buttons" >2 Structure</a></li>
+        <li ><a id="input3_garage" type="button" class="btn btn-default side-buttons" >3 Upper Floors</a></li>
+        <li ><a id="input4_garage" type="button" class="btn btn-default side-buttons" >4 Finishes</a></li>
+        <li ><a id="input5_garage" type="button" class="btn btn-default side-buttons" style="background-color: rgb(181, 181, 181)">5 Site Index</a></li>
+        <li ><a id="est_garage" type="button" class="btn btn-default side-buttons" >6 Summary</a></li>
+       </ul>
+    </div>
+  </div>
+</nav>
+
+  </div>
+  <div class="clearfix visible-xs"></div>
+
+  <!-- Main -->
+
+  <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
+    <div class="text-center" style="width: 100%; ">
+      <h2 class="visible-sm visible-md visible-lg">Build Location</h2>
+    </div>
+
+    <div class="calc-input">
+      <div class="row">
+        <div class="col-xs-12">
+ <script>
+function InerOnLoad(sys){
+sys.PageName="input5_garage";
+InitFrm(["dg_garage_sf","dg_garage_height","dg_roof_slope","dg_building_class"]);
+
+var selCntry = _.E("SelCntry"), selStat = _.E("SelState"), selCity = _.E("SelCity");
+selCntry.NxtSel=selStat;
+selStat.NxtSel=selCity;
+selCity.NxtSel=null;
+_.Sel.M(selCntry,CostIdxs);
+function HndlSelTre(s,fld){
+  var i=s.selectedIndex,d;
+  if(i<0 || i >= s.nwc$D.length)i=0;
+  d=s.nwc$D[i];
+  if(s.NxtSel==null){
+    _.D.S(fld,d[1]);
+    _.D.S(fld+"_L",d[2]);
+    _.D.S(fld+"_M",d[3]);
+    }
+  else{
+    _.Sel.M(s.NxtSel,d[4]);
+    s.NxtSel.nwcGrp=d;
+    s.NxtSel.selectedIndex=0;
+    s.NxtSel.onchange();
+    }
+  };
+selCntry.onchange=function(){HndlSelTre(selCntry,"CityIdx");}
+selStat.onchange=function(){HndlSelTre(selStat,"CityIdx");}
+selCity.onchange=function(){HndlSelTre(selCity,"CityIdx");}
+var ctIdx=+_.D.G("CityIdx");
+//[name, id, CostIdx1, CostIdx2, SubItemsAry]
+function SetCityById(L,d,c,s,y){//L-List,d-ID,c-CountySel,s-StateSel,y-CitySel
+ var i,j,k, St,C,t;
+ for(i=0;i<L.length;++i){
+   St=L[i];
+   if(St[1]==d){
+     c.selectedIndex=i;
+     _.Sel.M(s,St[4]);
+     y.innerHTML="";
+     c.onchange();
+     return St;
+     }
+   else{
+     St=St[4];
+     for(j=0;j<St.length;++j){
+       C=St[j];
+       if(C[1]==d){
+         c.selectedIndex=i;
+         _.Sel.M(s,St);
+         s.selectedIndex=j;
+         _.Sel.M(y,C[4]);
+         s.onchange();
+         return C;
+         }
+       else{
+         C=C[4];
+         for(k=0;k<C.length;++k){
+           t=C[k];
+           if(t[1]==d){
+             c.selectedIndex=i;
+             _.Sel.M(s,St);
+             s.selectedIndex=j;
+             _.Sel.M(y,C);
+             y.selectedIndex=k;
+             return t;
+             }
+           }
+         }
+       }
+     }
+   }
+ }
+
+SetCityById(CostIdxs,ctIdx,selCntry,selStat,selCity);
+  }
+</script>
+<!-- Main -->
+<table class="calc">
+<col width="50">
+<col width="100">
+
+
+<tr><td colspan="2"><help>Enter your nearest city below so we can adjust the cost to where you would like to build.  Then click on Calculate below to get your cost summary.</help></td></tr>
+<tr><td align="right">Country</td><td><select id="SelCntry"/></td></tr>
+<tr><td align="right">State</td><td><select id="SelState"/></td></tr>
+<tr><td align="right">City</td><td><select id="SelCity"/></td></tr>
+
+
+
+</table>
+        </div>
+      </div>
+
+      <div class="calc-input">
+        <a type="button" class="btn btn-primary btn-lg btn-next" href="input4_garage.html">PREV</a>
+        <a type="button" class="btn btn-primary btn-lg btn-next" href="est_garage.html">CALCULATE</a>
+
+        <div id="power_by" class="text-center">
+          <a href="http://www.crookstondesigns.com/plans.html">
+            <b>Choose a pre-entered plan from Crookston Custom Designs</b>
+          </a>
+        </div>
+      </div>
+   </div>
+</div>
+</div>
+<!-- End Main -->
+<br>
+  <div id="footer" class="footer">
+    <h4>
+      &copy; 2019 Cost To Build LLC &nbsp;<a href="privacypolicy.html">Privacy Policy</a>
+      <a style="float:right;" href="http://crookstondesigns.com" target="_blank">Crookston Custom Designs</a>
+    </h4>
+  </div>
+</div>
+</body>
+</html>

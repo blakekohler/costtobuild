@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>House Cost Estimator | Cost to Build a Home</title>
+	<link rel="icon" type="image/png" href="images/ctb_icon.png">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style/ctb-4.css" type="text/css" />
+	<script type="text/javascript" src="CostEstFlds.json"></script>
+  <script type="text/javascript" src="ulink/users.json"></script>
+  <script type="text/javascript" src="gn.js"></script>
+  <script type="text/javascript" src="LocCostIdx.json"></script>
+</head>
+<body onload="nwcLoad()">
+<noscript><p><H1>This site requires a browser that support JavaScript</H1></p><p></p></noscript>
+<div style="width: 100%; height: 6px; padding: 0px; margin-top: 0px; background-color: #092334;"></div>
+<div class="container">
+<div id="header">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html"><font style="font-size:40px; color: green;"><b>COST</b> to <b>BUILD</b></font></a>
+    </div>
+    <div class="topnav collapse navbar-collapse" id="mainNav">
+      <ul class="nav navbar-nav">
+        <li ><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Calculator
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+				<li class="active"><a href="calculator.html">House</a></li>             
+            <li ><a href="input1_garage.html">Garage</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li ><a href="advertise.html">Advertise on CTB</a></li>
+            <li ><a href="link_info.html">Link Your Plans to CTB</a></li> 
+          </ul>
+        </li>
+        <li ><a href="help.html">Help</a></li>
+        <li ><a href="about.html">About</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+<script>SetUser();</script>
+<div class="row calc_main">
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 text-center side_menu">
+<nav >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sideNav" >
+        <span class="icon-bar" style="background-color: #092334"></span>
+        <span class="icon-bar"style="background-color: #092334"></span>
+        <span class="icon-bar"style="background-color: #092334"></span>                        
+      </button>
+      <h2 class="visible-xs">Location Information</h2>
+    </div>
+    <div class="topnav collapse navbar-collapse" id="sideNav">
+      <ul class="nav navbar-nav">
+        <li ><a type="button" class="btn btn-default side-buttons" href="calculator.html">1 Main Floor</a></li>
+        <li ><a id="input2" type="button" class="btn btn-default side-buttons" >2 General</a></li>
+        <li ><a id="input3" type="button" class="btn btn-default side-buttons" >3 Basement</a></li>
+        <li ><a id="input4" type="button" class="btn btn-default side-buttons" >4 Garage</a></li>
+        <li ><a id="input5" type="button" class="btn btn-default side-buttons" >5 Upper Floors</a></li>
+        <li ><a id="input6" type="button" class="btn btn-default side-buttons" >6 Kitchens</a></li>
+        <li ><a id="input7" type="button" class="btn btn-default side-buttons" >7 Bathrooms</a></li>
+        <li ><a id="input8" type="button" class="btn btn-default side-buttons" >8 Finishes</a></li>
+        <li ><a id="input9" type="button" class="btn btn-default side-buttons" >9 Other</a></li>
+        <li ><a id="input10" type="button" class="btn btn-default side-buttons" style="background-color: rgb(181, 181, 181)">10 Site Index</a></li>
+        <li ><a id="estimator" type="button" class="btn btn-default side-buttons" >11 Summary</a></li>
+       </ul>
+    </div>
+  </div>
+</nav>
+	
+</div>
+<div class="clearfix visible-xs"></div>
+
+<script>
+function InerOnLoad(sys){
+sys.PageName="input10";
+InitFrm(["basement","basement_walkout","basement_finished_sf","basement_unfinished_sf","basement_height"]);
+
+var selCntry = _.E("SelCntry"), selStat = _.E("SelState"), selCity = _.E("SelCity");
+selCntry.NxtSel=selStat;
+selStat.NxtSel=selCity;
+selCity.NxtSel=null;
+_.Sel.M(selCntry,CostIdxs);
+function HndlSelTre(s,fld){
+  var i=s.selectedIndex,d;
+  if(i<0 || i >= s.nwc$D.length)i=0;
+  d=s.nwc$D[i];
+  if(s.NxtSel==null){
+    _.D.S(fld,d[1]);
+    _.D.S(fld+"_L",d[2]);
+    _.D.S(fld+"_M",d[3]);
+    }
+  else{
+    _.Sel.M(s.NxtSel,d[4]);
+    s.NxtSel.nwcGrp=d;
+    s.NxtSel.selectedIndex=0;
+    s.NxtSel.onchange();
+    }
+  };
+selCntry.onchange=function(){HndlSelTre(selCntry,"CityIdx");}
+selStat.onchange=function(){HndlSelTre(selStat,"CityIdx");}
+selCity.onchange=function(){HndlSelTre(selCity,"CityIdx");}
+var ctIdx=+_.D.G("CityIdx");
+//[name, id, CostIdx1, CostIdx2, SubItemsAry]
+function SetCityById(L,d,c,s,y){//L-List,d-ID,c-CountySel,s-StateSel,y-CitySel
+ var i,j,k, St,C,t;
+ for(i=0;i<L.length;++i){
+   St=L[i];
+   if(St[1]==d){
+     c.selectedIndex=i;
+     _.Sel.M(s,St[4]);
+     y.innerHTML="";
+     c.onchange();
+     return St;
+     }
+   else{
+     St=St[4];
+     for(j=0;j<St.length;++j){
+       C=St[j];
+       if(C[1]==d){
+         c.selectedIndex=i;
+         _.Sel.M(s,St);
+         s.selectedIndex=j;
+         _.Sel.M(y,C[4]);
+         s.onchange();
+         return C;
+         }
+       else{
+         C=C[4];
+         for(k=0;k<C.length;++k){
+           t=C[k];
+           if(t[1]==d){
+             c.selectedIndex=i;
+             _.Sel.M(s,St);
+             s.selectedIndex=j;
+             _.Sel.M(y,C);
+             y.selectedIndex=k;
+             return t;
+             }
+           }
+         }
+       }
+     }
+   }
+ }
+
+SetCityById(CostIdxs,ctIdx,selCntry,selStat,selCity);
+  }
+</script>
+<div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
+	<div id="Ad1" class="col-xs-12"></div>
+	<div class="calc-input row">
+		<div class="col-xs-12 col-sm-6"> 
+			<div class="text-center" style="width: 100%; ">
+				<h2>Location Information</h2>
+			</div>
+			<div>
+			<help>Enter your nearest city below so we can adjust the cost to where you would like to build.  Then click on Calculate below to get your cost summary.</help><br><br>
+			</div>
+			<div>
+				<table>
+				<col width="50">
+				<col width="100">
+				<tr><td align="right">Country_</td><td><select id="SelCntry"/></td></tr>
+			</table>
+			</div><br>
+			<div>	
+			<table>
+				<col width="50">
+				<col width="100">
+				<tr><td align="right">State_</td><td><select id="SelState"/></td></tr>
+			</table>
+			</div><br>
+			<div>	
+			<table>
+				<col width="50">
+				<col width="100">
+				<tr><td align="right">City_</td><td><select id="SelCity"/></td></tr>
+			</table><br><br>
+			</div>
+		</div>
+		<div class="clearfix visible-xs"></div>
+		<div class="col-xs-12 col-sm-6">
+			<div id="Ad2" class="col-xs-12"></div> 
+		</div>
+	</div>
+<br>
+<a type="button" class="btn btn-primary btn-lg btn-next" href="input9.html">Prev</a>	
+<a type="button" class="btn btn-primary btn-lg btn-next" id="EndCalc" href="https://costtobuild.net/estimator.html">CALCULATE</a>
+<!-- End Main -->
+<div id="Ad3"></div>
+</div>
+<div id="power_by" class="text-center">
+<a href="http://www.crookstondesigns.com/plans.html"><b>Choose a pre-entered plan from Crookston Custom Designs</b></a>
+</div>
+</div>
+
+<br>
+
+<div id="footer" class="footer">
+      <h4>&copy; 2019 Cost To Build LLC &nbsp;<a href="privacypolicy.html">Privacy Policy</a> 
+      <a style="float:right;" href="http://crookstondesigns.com" target="_blank">Crookston Custom Designs</a></h4>
+</div>
+</div>
+<script>SetUserFooter();</script>
+</body></html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65913035-1', 'auto');
+  ga('send', 'pageview');
+
+</script><div id="addholder" style="display: none;">
+	<div id="HoldAd1" class="ad_hold">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- house_input_resp_1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5476550292839038"
+     data-ad-slot="8094576717"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+	<div id="HoldAd2" class="ad_hold">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- house_input_resp_2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5476550292839038"
+     data-ad-slot="4861908718"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+</div>
+<script>
+function MovE(N,E){
+_.ER(E.parentNode,E);
+_.EA(N,E);
+}
+MovE(_.E("Ad1"),_.E("HoldAd1"));
+MovE(_.E("Ad2"),_.E("HoldAd2"));
+</script>

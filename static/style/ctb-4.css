@@ -1,0 +1,254 @@
+/***********************************************/
+/* HTML tag styles                             */
+/***********************************************/
+
+body {
+background-color: rgb(204, 204, 204);
+}
+
+.calc_main {
+background-color: rgb(255, 255, 255);
+margin: 15px 0 15px 0;
+border-radius: 5px;
+}
+
+.side_menu {
+margin: 15px 0 15px 0;
+}
+
+.footer {
+background-color: #E7E7E7;
+padding: 5px 5px 5px 5px;
+}
+
+.navbar-nav > li {
+  font-size: 15px;
+  }
+.dropdown-menu {
+    font-size: 15px;
+  }
+
+.user_header{
+background-color: rgb(255, 255, 255);
+margin: 15px 0 15px 0;
+padding: 10px 0px 10px 0px;
+border-radius: 5px;
+}
+
+.thumbnail {
+    position: relative;
+}
+ 
+.caption {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+}
+
+.calc-input{
+	background-color: rgb(255, 255, 255);
+}
+
+.side-buttons{
+width: 115px;
+cursor:default;
+text-align: left;
+}
+
+.side-buttons:link{
+	cursor:pointer;
+}
+
+.btn-next{
+width: 200px;
+display:none;
+
+}
+.btn-next:link{
+display:inline-block;
+}
+
+.calc{text-align: left; border=1px; width: 100%;}
+
+.sum {
+font-family : "Arial Baltic" , sans-serif;
+font-size : 10.00pt;
+font-style : normal;
+font-weight : 400;
+padding-left : 1px;
+padding-right : 1px;
+padding-top : 1px;
+text-align : left;
+vertical-align : bottom;
+}
+
+.t_sum {
+	border:1px solid #000000;
+	background-color: rgb(255, 255, 255);
+	margin: 0px 0px 0px 0px;
+}
+
+.sumi{
+overflow:hidden;
+border:0px solid #000000;
+width:100% ;
+padding-right:1px;
+color : windowtext;
+font-family : Arial , sans-serif;
+font-size : 10.00pt;
+font-style : normal;
+font-weight : 400;
+text-align : right;
+vertical-align : bottom;
+}
+
+.font-bold {
+font-weight: bold;
+}
+
+.help_img {
+cursor: pointer;
+height: 150px;
+}
+
+.help_img_t {
+cursor: pointer;
+width:60px;
+height:40px;
+vertical-align:bottom;
+}
+
+.ad_box {
+	width:100%;
+	float: left; 
+	margin: 15px 0 15px 0;
+}
+
+.ad_hold {
+	width:100%;
+	margin: 15px 0 15px 0;
+}
+
+.ccd_img {
+	max-height: 100%;
+	width: auto;
+	margin: 0 auto;
+}
+
+.BidItem{
+right:0px;
+min-width:250px;
+background: linear-gradient(to bottom right, rgba(163, 151, 86, 0.30), rgba(245, 245, 255, 0.50));
+border-radius: 3px;
+margin-left:5px;
+margin-bottom: 5px; 
+}
+.CostNum{
+  width:92px;
+  }
+.CostTxt{
+  width:97px;
+  display: inline-block;
+  }
+.QtyIn{
+  max-width:30px;
+  display: inline-block;
+  }
+.CostIn{
+  max-width:97px;
+  display: inline-block;
+  }
+.PerctIn{
+  max-width:57px;
+  display: inline-block;
+  }
+.CostBlck{
+  width:960px;
+  position:absolute;
+  right:0px;
+  }
+.CostBlck2{
+  width:960px;
+  position:absolute;
+  right:0px;
+  }
+.BlckWrp{
+  /*border-style: solid;*/
+  box-shadow: inset 0 0 5px black;
+  position:relative;
+  left:0px;
+  right:0px;
+  background-color:rgb(235, 235, 235);
+  }
+.BlckWrp2{
+  position:relative;
+  left:0px;
+  right:0px;
+  height:26px;
+  }
+.SkipItem{
+  color:#d7dcc9
+  }
+.SelGrp{
+  /*border:3px solid red;*/
+box-shadow: 0 0 5px rgba(185, 241, 12, 0.65), inset 0 0 15px rgba(12, 241, 102, 0.65);
+background-color:rgb(255, 255, 255);
+}
+.Sect{
+
+}
+.SectHdr{
+  font-weight:600;
+
+  }
+.Total{
+  font-weight:600;
+}
+.GrdTotal{
+  font-weight:600;
+  font-size: 18px;
+}
+table{
+  width:100%;
+}
+
+td{
+  padding:1px 2px;
+}
+.SumCat{
+  font-weight:600;
+  font-size: 20px;
+}
+.bidCat{
+  font-weight:600;
+  font-size: 18px;
+}
+
+.Dlg{
+  background-color:rgba(255, 255, 225, 0.93);
+  /*border: 1px solid #101010;*/
+  box-shadow:1px 8px 25px #21211e;
+  border-radius: 3px;
+}
+.DlgTitle{background-color:rgba(119, 199, 228, 0.86);}
+
+.table-striped{background-color:rgb(255, 255, 255);}
+
+.LnkRow{
+ 
+  cursor: pointer;
+
+}
+
+.divline{
+  width: 100%; 
+  height: 6px; 
+  padding: 0px; 
+  margin-top: 0px; 
+  background-color: #092334;
+}
+
+.tutorial{
+  
+}

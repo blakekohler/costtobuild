@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>House Cost Estimator | Cost to Build a Home</title>
+	<link rel="icon" type="image/png" href="images/ctb_icon.png">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style/ctb-4.css" type="text/css" />
+	<script type="text/javascript" src="CostEstFlds.js"></script>
+    <script type="text/javascript" src="ulink/users.json"></script>
+  <script type="text/javascript" src="gn.js"></script>
+</head>
+<body >
+<noscript><p><H1>This site requires a browser that support JavaScript</H1></p><p></p></noscript>
+<div style="width: 100%; height: 6px; padding: 0px; margin-top: 0px; background-color: #092334;"></div>
+<div class="container">
+<div id="header">
+
+</div>
+
+<script>
+function InerOnLoad(sys){
+sys.PageName="calculator";
+InitFrm(["main_floor_sf","main_floor_height","slab_on_grade","porch_sf","cov_porch_sf", "deck_sf","covered_deck_sf","roof_slope","building_class"]);
+  }
+</script>
+
+<div class="row calc_main">
+<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 text-center side_menu">
+    	
+
+  
+    
+      <ul class="nav navbar-nav">
+        <li ><a type="button" class="btn btn-default side-buttons" href="calculator.html" style="background-color: rgb(181, 181, 181)">1 Main Floor</a></li>
+        <li ><a id="input2" type="button" class="btn btn-default side-buttons" >2 General</a></li>
+        <li ><a id="input3" type="button" class="btn btn-default side-buttons" >3 Basement</a></li>
+        <li ><a id="input4" type="button" class="btn btn-default side-buttons" >4 Garage</a></li>
+        <li ><a id="input5" type="button" class="btn btn-default side-buttons" >5 Upper Floors</a></li>
+        <li ><a id="input6" type="button" class="btn btn-default side-buttons" >6 Kitchens</a></li>
+        <li ><a id="input7" type="button" class="btn btn-default side-buttons" >7 Bathrooms</a></li>
+        <li ><a id="input8" type="button" class="btn btn-default side-buttons" >8 Finishes</a></li>
+        <li ><a id="input9" type="button" class="btn btn-default side-buttons" >9 Other</a></li>
+        <li ><a id="input10" type="button" class="btn btn-default side-buttons" >10 Site Index</a></li>
+        
+       </ul>
+   
+
+
+</div>
+<div class="clearfix visible-xs"></div>
+
+<!-- Main -->
+
+<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
+	<div class="text-center" style="width: 100%; ">
+		<h2 class="visible-sm visible-md visible-lg">Main Floor Information</h2>
+	</div>
+	
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12 col-md-7">
+				<div class="row">
+					<div class="col-xs-7 col-sm-7 col-md-12">
+						<h3>Main floor living area:</h3>
+					</div>			
+					<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal0">					
+							<img src="images/areas.jpg" alt="Area Examples" class="help_img_t img-rounded"/>
+								<div style="bottom: 0" class="caption post-content">
+                				<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               			</div>
+               	</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<input type="text" id="main_floor_sf"/> <b>sf</b><br>
+					</div>
+				</div>
+  				<div>
+					<help>Enter the square footage of the living area on the main floor. The living area does not include areas such as garages, porches or decks.</help>
+				</div>
+			</div>
+			<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal0">
+					<img src="images/areas.jpg" alt="Area Examples" class="help_img img-rounded" />
+						<div style="bottom: 0" class="caption post-content">
+                		<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               	</div>
+				</button>				
+			</div>
+		</div>
+			
+			</div><br>
+  <div class="modal" id="myModal0" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+    	<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Area Examples</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/areas.jpg" class="img-responsive">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+  </div>		
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12 col-md-7">
+				<div class="row">
+					<div class="col-xs-7 col-sm-7 col-md-12">
+						<h3>Main floor ceiling height:</h3>
+					</div>			
+					<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal1">					
+							<img src="images/ceiling_height_main.jpg" alt="Ceiling Height" class="help_img_t img-rounded"/>
+								<div style="bottom: 0" class="caption post-content">
+                				<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               			</div>
+               	</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div id="main_floor_height"></div><br>
+					</div>
+				</div>
+  				<div>
+					<help>Enter the main floor ceiling height. This is the distance in feet from the floor to the ceiling. The standard ceiling height is 8 feet, but they are often upgraded to 9' or 10'.</help>
+				</div>
+			</div>
+			<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal1">
+					<img src="images/ceiling_height_main.jpg" alt="Ceiling Height" class="help_img img-rounded" />
+						<div style="bottom: 0" class="caption post-content">
+                		<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               	</div>
+				</button>				
+			</div>
+		</div>
+                <div id="Ad1"></div>
+			</div><br>
+  <div class="modal" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+    	<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Ceiling Height</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/ceiling_height_main.jpg" class="img-responsive">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+  </div>		
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12 col-md-7">
+				<div class="row">
+					<div class="col-xs-7 col-sm-7 col-md-12">
+						<h3>Slab on grade:</h3>
+					</div>			
+					<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">					
+							<img src="images/slab_on_grade.jpg" alt="Slab on Grade" class="help_img_t img-rounded"/>
+								<div style="bottom: 0" class="caption post-content">
+                				<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               			</div>
+               	</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div id="slab_on_grade"></div><br>
+					</div>
+				</div>
+  				<div>
+					<help>Will this be a slab on grade home? If you select "No" the program will calculate your home assuming it will have a crawl space or a basement. Slab on grade will calculate your main floor as concrete.</help>
+				</div>
+			</div>
+			<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">
+					<img src="images/slab_on_grade.jpg" alt="Slab on Grade" class="help_img img-rounded" />
+						<div style="bottom: 0" class="caption post-content">
+                		<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               	</div>
+				</button>				
+			</div>
+		</div>
+				
+		</div><br>
+  <div class="modal" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+    	<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Slab on Grade</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/slab_on_grade.jpg" class="img-responsive">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+  </div>		
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12 col-md-7">
+				<div class="row">
+					<div class="col-xs-7 col-sm-7 col-md-12">
+						<h3>Covered porch area:</h3>
+					</div>			
+					<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal3">					
+							<img src="images/porch.jpg" alt="Porch" class="help_img_t img-rounded"/>
+								<div style="bottom: 0" class="caption post-content">
+                				<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               			</div>
+               	</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<input type="text" id="porch_sf"/> <b>sf</b><br>
+					</div>
+				</div>
+  				<div>
+					<help>This is the total area of all the porches on your home which will not have usable area underneath it. Porches are covered exterior areas which have a concrete floor. Deck area will be entered later.</help>
+				</div>
+			</div>
+			<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal3">
+					<img src="images/porch.jpg" alt="Porch" class="help_img img-rounded" />
+						<div style="bottom: 0" class="caption post-content">
+                		<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               	</div>
+				</button>				
+			</div>
+		</div>
+            <div id="Ad2"></div>
+			</div><br>
+  <div class="modal" id="myModal3" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+    	<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Porch</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/porch.jpg" class="img-responsive">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+  </div>		
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12 col-md-7">
+				<div class="row">
+					<div class="col-xs-7 col-sm-7 col-md-12">
+						<h3>Covered Porch w/ Cold Storage Under:</h3>
+					</div>			
+					<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal4">					
+							<img src="images/cold_storage.jpg" alt="Coverd Porch With Cold Storage" class="help_img_t img-rounded"/>
+								<div style="bottom: 0" class="caption post-content">
+                				<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               			</div>
+               	</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<input type="text" id="cov_porch_sf" /> <b>sf</b><br>
+					</div>
+				</div>
+  				<div>
+					<help>This is the total area of all the porches on your home which will have usable area underneath it. Often times the area underneath will be used for cold storage.</help>
+				</div>
+			</div>
+			<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal4">
+					<img src="images/cold_storage.jpg" alt="Coverd Porch With Cold Storage" class="help_img img-rounded" />
+						<div style="bottom: 0" class="caption post-content">
+                		<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               	</div>
+				</button>				
+			</div>
+		</div>
+			</div><br>
+  <div class="modal" id="myModal4" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+    	<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Coverd Porch With Cold Storage</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/cold_storage.jpg" class="img-responsive">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+  </div>		
+  <div class="calc-input">
+	<div class="row">
+		<div class="col-xs-12 col-md-7">
+			<div class="row">
+				<div class="col-xs-7 col-sm-7 col-md-12">
+					<h3>Uncovered Deck Area:</h3>
+				</div>			
+				<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal0">					
+						<img src="images/deck.jpg" alt="Deck" class="help_img_t img-rounded"/>
+							<div style="bottom: 0" class="caption post-content">
+							<h4 style="color: rgb(0, 83, 249);">Example</h4>
+					   </div>
+			   </button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<input type="text" id="deck_sf"/> <b>sf</b><br>
+				</div>
+			</div>
+			  <div>
+				<help>Enter the total area of deck on your home which will not be covered.</help>
+			</div>
+		</div>
+		<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal0">
+				<img src="images/deck.jpg" alt="Deck" class="help_img img-rounded" />
+					<div style="bottom: 0" class="caption post-content">
+					<h4 style="color: rgb(0, 83, 249);">Example</h4>
+			   </div>
+			</button>				
+		</div>
+	</div>
+		<div id="Ad1"></div>
+		</div><br>
+<div class="modal" id="myModal0" role="dialog">
+<div class="modal-dialog">
+  <!-- Modal content-->
+	<div class="modal-content">
+	<div class="modal-header">
+	  <button type="button" class="close" data-dismiss="modal">&times;</button>
+	  <h4 class="modal-title">Deck</h4>
+	</div>
+	<div class="modal-body">
+	  <img src="images/deck.jpg" class="img-responsive">
+	</div>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	</div>
+  </div>
+</div>
+</div>		
+<div class="calc-input">
+	<div class="row">
+		<div class="col-xs-12 col-md-7">
+			<div class="row">
+				<div class="col-xs-7 col-sm-7 col-md-12">
+					<h3>Covered deck Area:</h3>
+				</div>			
+				<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal1">					
+						<img src="images/covered_deck.jpg" alt="Covered Deck" class="help_img_t img-rounded"/>
+							<div style="bottom: 0" class="caption post-content">
+							<h4 style="color: rgb(0, 83, 249);">Example</h4>
+					   </div>
+			   </button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<input type="text" id="covered_deck_sf"/> <b>sf</b><br>
+				</div>
+			</div>
+			  <div>
+				<help>Enter the total area of deck on your home which will be covered.</help>
+			</div>
+		</div>
+		<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal1">
+				<img src="images/covered_deck.jpg" alt="Covered Deck" class="help_img img-rounded" />
+					<div style="bottom: 0" class="caption post-content">
+					<h4 style="color: rgb(0, 83, 249);">Example</h4>
+			   </div>
+			</button>				
+		</div>
+	</div>
+		</div><br>
+<div class="modal" id="myModal1" role="dialog">
+<div class="modal-dialog">
+  <!-- Modal content-->
+	<div class="modal-content">
+	<div class="modal-header">
+	  <button type="button" class="close" data-dismiss="modal">&times;</button>
+	  <h4 class="modal-title">Covered Deck</h4>
+	</div>
+	<div class="modal-body">
+	  <img src="images/covered_deck.jpg" class="img-responsive">
+	</div>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	</div>
+  </div>
+</div>
+</div>		
+<div class="calc-input">
+	<div class="row">
+		<div class="col-xs-12 col-md-7">
+			<div class="row">
+				<div class="col-xs-7 col-sm-7 col-md-12">
+					<h3>What is Your Roof Slope:</h3>
+				</div>			
+				<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">					
+						<img src="images/slope2.jpg" alt="slope" class="help_img_t img-rounded"/>
+							<div style="bottom: 0" class="caption post-content">
+							<h4 style="color: rgb(0, 83, 249);">Example</h4>
+					   </div>
+			   </button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div id="roof_slope"></div><br>
+				</div>
+			</div>
+			  <div>
+				<help>The slope determines how steep your roof will be. It is defined as the number of units vertical your roof rises compared to 12 units horizontal. Roof slopes can vary significantly. Typically they are in the range of 4:12 to 12:12. A common roof pitch would be around 6:12.</help>
+			</div>
+		</div>
+		<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">
+				<img src="images/slope2.jpg" alt="slope" class="help_img img-rounded" />
+					<div style="bottom: 0" class="caption post-content">
+					<h4 style="color: rgb(0, 83, 249);">Example</h4>
+			   </div>
+			</button>				
+		</div>
+	</div>
+			<div id="Ad2"></div>
+	</div><br>
+<div class="modal" id="myModal2" role="dialog">
+<div class="modal-dialog">
+  <!-- Modal content-->
+	<div class="modal-content">
+	<div class="modal-header">
+	  <button type="button" class="close" data-dismiss="modal">&times;</button>
+	  <h4 class="modal-title">slope</h4>
+	</div>
+	<div class="modal-body">
+	  <img src="images/slope2.jpg" class="img-responsive">
+	</div>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	</div>
+  </div>
+</div>
+</div>		
+<div class="calc-input">
+	<div class="row">
+		<div class="col-xs-12">
+			<h3>What Structure Class Does Your Home Fit:</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<div id="building_class"></div><br>
+		</div>
+	</div>
+	  <div>
+	<help>
+In order to determine the complexity of your home (which will effect the cost), select the class that best fits your home.<br>
+	  <a href="http://www.crookstondesigns.com">See examples provided by Crookston Custom Designs</a> <br>
+<b>Structure class 1</b> is considered the most basic with no extras. Starter homes will often fit into this class or class 2.
+Typically there will only be one or two roof lines and the ceiling height will not change through out the home.<br>
+	  <a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_10058.00.html">Example 1 (Class 1)</a> <br><br>
+<b>Structure class 2</b> is still a fairly simple home, but more complicated than class 1. Typically there will only be three to five
+roof lines. The ceiling height will still stay the same through out the home.<br>
+	  <a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_8031.00.html">Example 1 (Class 2)</a> |
+	  <a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_10007.00.html">Example 2 (Class 2)</a> <br><br>
+<b>Structure class 3</b> is intended to be a fairly typical home complexity. Typically there will be 6 to 9 roof lines. The
+ceiling height may change in one area but over all there is not much variation in roof height.<br>
+	  <a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_7053.00.html">Example 1 (Class 3)</a> |
+	  <a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_11012.00.html">Example 2 (Class 3)</a> <br>
+	  <a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_9044.00.html">Example 3 (Class 3)</a> |
+			  <a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_8018.00.html">Example 4 (Class 3)</a> <br><br>
+<b>Structure class 4</b> is intended to be a custom home with several changes in ceiling heights through out the home. Typically there
+will be many different roof lines.<br>
+				<a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_9038.00.html">Example 1 (Class 4)</a> |
+				<a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_10014.00.html">Example 2 (Class 4)</a> <br><br>
+<b>Structure class 5</b> is intended to be the most complicated custom home with many changes in ceiling heights through out the
+home. The roof will vary in height in many locations with many different roof lines.<br>
+			</help>
+	</div>				
+		</div><br>
+<a type="button" class="btn btn-primary btn-lg btn-next" href="input2.html">NEXT</a>
+		
+<a type="button" class="btn btn-primary btn-lg btn-next" id="EndCalc">CALCULATE</a>
+
+</div>
+<div id="power_by" class="text-center">
+<a href="http://www.crookstondesigns.com/plans.html"><b>Choose a pre-entered plan from Crookston Custom Designs</b></a>
+</div>
+</div>
+<!-- End Main --><br>
+<div id="footer" class="footer">
+      <h4>&copy; 2019 Cost To Build LLC &nbsp;<a href="privacypolicy.html">Privacy Policy</a> 
+      <a style="float:right;" href="http://crookstondesigns.com" target="_blank">Crookston Custom Designs</a></h4>
+</div>
+</div>
+<script>SetUserFooter();</script>
+</body></html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65913035-1', 'auto');
+  ga('send', 'pageview');
+
+</script><div id="addholder" style="display: none;">
+	<div id="HoldAd1" class="ad_hold">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- house_input_resp_1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5476550292839038"
+     data-ad-slot="8094576717"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+	<div id="HoldAd2" class="ad_hold">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- house_input_resp_2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5476550292839038"
+     data-ad-slot="4861908718"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+
+</div>
+<script>
+function MovE(N,E){
+_.ER(E.parentNode,E);
+_.EA(N,E);
+}
+MovE(_.E("Ad1"),_.E("HoldAd1"));
+MovE(_.E("Ad2"),_.E("HoldAd2"));
+
+</script>

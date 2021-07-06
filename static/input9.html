@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>House Cost Estimator | Cost to Build a Home</title>
+	<link rel="icon" type="image/png" href="images/ctb_icon.png">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style/ctb-4.css" type="text/css" />
+	<script type="text/javascript" src="CostEstFlds.json"></script>
+  <script type="text/javascript" src="ulink/users.json"></script>
+  <script type="text/javascript" src="gn.js"></script>
+</head>
+<body >
+<noscript><p><H1>This site requires a browser that support JavaScript</H1></p><p></p></noscript>
+<div style="width: 100%; height: 6px; padding: 0px; margin-top: 0px; background-color: #092334;"></div>
+<div class="container">
+<div id="header">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html"><font style="font-size:40px; color: green;"><b>COST</b> to <b>BUILD</b></font></a>
+    </div>
+    <div class="topnav collapse navbar-collapse" id="mainNav">
+      <ul class="nav navbar-nav">
+        <li ><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Calculator
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+				<li class="active"><a href="calculator.html">House</a></li>             
+            <li ><a href="input1_garage.html">Garage</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li ><a href="advertise.html">Advertise on CTB</a></li>
+            <li ><a href="link_info.html">Link Your Plans to CTB</a></li> 
+          </ul>
+        </li>
+        <li ><a href="help.html">Help</a></li>
+        <li ><a href="about.html">About</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+<script>SetUser();</script>
+<script>
+function InerOnLoad(sys){
+sys.PageName="input9";
+InitFrm(["septic","propan_tanks","fire_gas_vented","fire_gas_unvented","fire_brick","fire_woodstove","fire_protection"]);
+  }
+</script>
+
+<div class="row calc_main">
+<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 text-center side_menu">
+<nav >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sideNav" >
+        <span class="icon-bar" style="background-color: #092334"></span>
+        <span class="icon-bar"style="background-color: #092334"></span>
+        <span class="icon-bar"style="background-color: #092334"></span>                        
+      </button>
+      <h2 class="visible-xs">Other</h2>
+    </div>
+    <div class="topnav collapse navbar-collapse" id="sideNav">
+      <ul class="nav navbar-nav">
+        <li ><a type="button" class="btn btn-default side-buttons" href="calculator.html">1 Main Floor</a></li>
+        <li ><a id="input2" type="button" class="btn btn-default side-buttons" >2 General</a></li>
+        <li ><a id="input3" type="button" class="btn btn-default side-buttons" >3 Basement</a></li>
+        <li ><a id="input4" type="button" class="btn btn-default side-buttons" >4 Garage</a></li>
+        <li ><a id="input5" type="button" class="btn btn-default side-buttons" >5 Upper Floors</a></li>
+        <li ><a id="input6" type="button" class="btn btn-default side-buttons" >6 Kitchens</a></li>
+        <li ><a id="input7" type="button" class="btn btn-default side-buttons" >7 Bathrooms</a></li>
+        <li ><a id="input8" type="button" class="btn btn-default side-buttons" >8 Finishes</a></li>
+        <li ><a id="input9" type="button" class="btn btn-default side-buttons" style="background-color: rgb(181, 181, 181)">9 Other</a></li>
+        <li ><a id="input10" type="button" class="btn btn-default side-buttons" >10 Site Index</a></li>
+        <li ><a id="estimator" type="button" class="btn btn-default side-buttons" >11 Summary</a></li>
+       </ul>
+    </div>
+  </div>
+</nav>
+	<div id="Ad3"></div>
+</div>
+<div class="clearfix visible-xs"></div>
+
+<!-- Main -->
+
+<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
+	<div class="text-center" style="width: 100%; ">
+		<h2 class="visible-sm visible-md visible-lg">Other</h2>
+	</div>
+	
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12">
+				<h3>Will your home need a septic System:</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="septic"></div><br>
+			</div>
+		</div>
+  		<div>
+			<help>Most homes are connected to a public sewer system and will not need a septic system. If a connection is not available you will need a Septic System.</help>
+		</div>				
+			</div><br>
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12">
+				<h3>Enter number of propane tanks you need:</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<input type="text" id="propan_tanks"/><br>
+			</div>
+		</div>
+  		<div>
+			<help>Propane Tanks are used for fuel storage where it will be used. Some times there is piped in natural gas available or you may chose to use electric heat, if this is the case you will not need propane tanks. (1000 Gallon's per tank)</help>
+		</div>				
+		<div id="Ad1"></div>
+			</div><br>
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12 col-md-7">
+				<div class="row">
+					<div class="col-xs-7 col-sm-7 col-md-12">
+						<h3>Number of Gas Fire Places:</h3>
+					</div>			
+					<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">					
+							<img src="images/fireplace.jpg" alt="Fireplace" class="help_img_t img-rounded"/>
+								<div style="bottom: 0" class="caption post-content">
+                				<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               			</div>
+               	</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<input type="text" id="fire_gas_vented"/><br>
+					</div>
+				</div>
+  				<div>
+					<help>Gas fire places are used for looks and heat, they can be built into a wall or they can be free standing.</help>
+				</div>
+			</div>
+			<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">
+					<img src="images/fireplace.jpg" alt="Fireplace" class="help_img img-rounded" />
+						<div style="bottom: 0" class="caption post-content">
+                		<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               	</div>
+				</button>				
+			</div>
+		</div>
+			</div><br>
+  <div class="modal" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+    	<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Fireplace</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/fireplace.jpg" class="img-responsive">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+  </div>		
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12">
+				<h3>Number of Un-vented Gas Fire Places:</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<input type="text" id="fire_gas_unvented"/><br>
+			</div>
+		</div>
+  		<div>
+			<help>This is similar to a gas fire place as described above, except it is not vented to the exterior of your home. Un-vented fire places are more efficient than vented ones but they do have some disadvantages. They put moisture into the air, this may or may not be a disadvantage. They use oxygen from the air in your home and can put out an odor from the gas. Most people prefer the vented fire places.<br></help>
+		</div>				
+			</div><br>
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12">
+				<h3>Number of Brick Wood Fire Places:</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<input type="text" id="fire_brick"/><br>
+			</div>
+		</div>
+  		<div>
+			<help>This refers to fireplaces constructed out of brick and masonry. These types of fire places have a chimney and are able to burn wood. They can be fitted with a gas log system.</help>
+		</div>				
+			</div><br>
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12 col-md-7">
+				<div class="row">
+					<div class="col-xs-7 col-sm-7 col-md-12">
+						<h3>Number of Wood Burning Stoves:</h3>
+					</div>			
+					<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal5">					
+							<img src="images/woodstove.jpg" alt="Wood Stove" class="help_img_t img-rounded"/>
+								<div style="bottom: 0" class="caption post-content">
+                				<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               			</div>
+               	</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<input type="text" id="fire_woodstove"/><br>
+					</div>
+				</div>
+  				<div>
+					<help>This refers to a stove which sits in the room and is equipped to burn wood. This will require a chimney and is typically more expensive than a gas fire place.</help>
+				</div>
+			</div>
+			<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal5">
+					<img src="images/woodstove.jpg" alt="Wood Stove" class="help_img img-rounded" />
+						<div style="bottom: 0" class="caption post-content">
+                		<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               	</div>
+				</button>				
+			</div>
+		</div>
+				<div id="Ad2"></div>
+		</div><br>
+  <div class="modal" id="myModal5" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+    	<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Wood Stove</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/woodstove.jpg" class="img-responsive">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+  </div>		
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12 col-md-7">
+				<div class="row">
+					<div class="col-xs-7 col-sm-7 col-md-12">
+						<h3>Home Fire Suppression System:</h3>
+					</div>			
+					<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal6">					
+							<img src="images/fire_sup.jpg" alt="Fire Suppression" class="help_img_t img-rounded"/>
+								<div style="bottom: 0" class="caption post-content">
+                				<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               			</div>
+               	</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div id="fire_protection"></div><br>
+					</div>
+				</div>
+  				<div>
+					<help>Sometimes fire suppression systems are required inside a home. This is a system of sprinklers piped throughout the home and set to automatically go off in a fire. This is not a common requirement but can amount to significant cost if it is required.<br></help>
+				</div>
+			</div>
+			<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal6">
+					<img src="images/fire_sup.jpg" alt="Fire Suppression" class="help_img img-rounded" />
+						<div style="bottom: 0" class="caption post-content">
+                		<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               	</div>
+				</button>				
+			</div>
+		</div>
+			</div><br>
+  <div class="modal" id="myModal6" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+    	<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Fire Suppression</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/fire_sup.jpg" class="img-responsive">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+  </div>		
+
+<a type="button" class="btn btn-primary btn-lg btn-next" href="input8.html">Prev</a>	
+<a type="button" class="btn btn-primary btn-lg btn-next" href="input10.html">NEXT</a>
+		
+<a type="button" class="btn btn-primary btn-lg btn-next" id="EndCalc">CALCULATE</a>
+
+</div>
+<div id="power_by" class="text-center">
+<a href="http://www.crookstondesigns.com/plans.html"><b>Choose a pre-entered plan from Crookston Custom Designs</b></a>
+</div>
+</div>
+<!-- End Main --><br>
+<div id="footer" class="footer">
+      <h4>&copy; 2019 Cost To Build LLC &nbsp;<a href="privacypolicy.html">Privacy Policy</a> 
+      <a style="float:right;" href="http://crookstondesigns.com" target="_blank">Crookston Custom Designs</a></h4>
+</div>
+</div>
+<script>SetUserFooter();</script>
+</body></html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65913035-1', 'auto');
+  ga('send', 'pageview');
+
+</script><div id="addholder" style="display: none;">
+	<div id="HoldAd1" class="ad_hold">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- house_input_resp_1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5476550292839038"
+     data-ad-slot="8094576717"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+	<div id="HoldAd2" class="ad_hold">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- house_input_resp_2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5476550292839038"
+     data-ad-slot="4861908718"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+	<div id="HoldAd3" class="ad_hold">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- house_input_resp_3 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5476550292839038"
+     data-ad-slot="6338641918"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+</div>
+<script>
+function MovE(N,E){
+_.ER(E.parentNode,E);
+_.EA(N,E);
+}
+MovE(_.E("Ad1"),_.E("HoldAd1"));
+MovE(_.E("Ad2"),_.E("HoldAd2"));
+MovE(_.E("Ad3"),_.E("HoldAd3"));
+</script>

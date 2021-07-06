@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65913035-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-65913035-1');
+        </script>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>General Information | Garage Cost Calculator</title>
+	<link rel="icon" type="image/png" href="images/ctb_icon.png">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style/ctb-4.css" type="text/css" />
+	<script type="text/javascript" src="CostEstFlds_garage.json"></script><script type="text/javascript" src="gn.js"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5476550292839038",
+          enable_page_level_ads: true
+		});
+	</script>
+</head>
+<body >
+<noscript><p><H1>This site requires a browser that support JavaScript</H1></p><p></p></noscript>
+<div style="width: 100%; height: 6px; padding: 0px; margin-top: 0px; background-color: #092334;"></div>
+<div class="container">
+<div id="header">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html"><font style="font-size:40px; color: green;"><b>COST</b> to <b>BUILD</b></font></a>
+    </div>
+    <div class="topnav collapse navbar-collapse" id="mainNav">
+      <ul class="nav navbar-nav">
+        <li ><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Calculator
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+				<li ><a href="calculator.html">House</a></li>             
+            <li class="active";><a href="input1_garage.html">Garage</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li ><a href="advertise.html">Advertise on CTB</a></li>
+            <li ><a href="link_info.html">Link Your Plans to CTB</a></li> 
+          </ul>
+        </li>
+        <li ><a href="help.html">Help</a></li>
+        <li ><a href="about.html">About</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+<script>
+function InerOnLoad(sys){
+sys.PageName="input1_garage";
+InitFrm(["dg_garage_sf","dg_garage_height","dg_roof_slope","dg_building_class"]);
+  }
+</script>
+
+<div class="row calc_main">
+<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 text-center side_menu">
+    	<div id="Ad3"><h3 style="color: green;">Answer the questions to get a detailed cost summary for a new Garage.</h3></div>
+<nav >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sideNav" >
+        <span class="icon-bar" style="background-color: #092334"></span>
+        <span class="icon-bar"style="background-color: #092334"></span>
+        <span class="icon-bar"style="background-color: #092334"></span>                        
+      </button>
+      <h2 class="visible-xs">General Information</h2>
+    </div>
+    <div class="topnav collapse navbar-collapse" id="sideNav">
+      <ul class="nav navbar-nav">
+        <li ><a type="button" class="btn btn-default side-buttons" href="input1_garage.html" style="background-color: rgb(181, 181, 181)">1 General</a></li>
+        <li ><a id="input2_garage" type="button" class="btn btn-default side-buttons" >2 Structure</a></li>
+        <li ><a id="input3_garage" type="button" class="btn btn-default side-buttons" >3 Upper Floors</a></li>
+        <li ><a id="input4_garage" type="button" class="btn btn-default side-buttons" >4 Finishes</a></li>
+        <li ><a id="input5_garage" type="button" class="btn btn-default side-buttons" >5 Site Index</a></li>
+        <li ><a id="est_garage" type="button" class="btn btn-default side-buttons" >6 Summary</a></li>
+       </ul>
+    </div>
+  </div>
+</nav>
+
+</div>
+<div class="clearfix visible-xs"></div>
+
+<!-- Main -->
+
+<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
+	<div class="text-center" style="width: 100%; ">
+		<h2 class="visible-sm visible-md visible-lg">General Information</h2>
+	</div>
+	
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12">
+				<h3>Garage Square Footage:</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<input type="text" id="dg_garage_sf"/> <b>sf</b><br>
+			</div>
+		</div>
+  		<div>
+			<help>Enter the <b>Square Footage</b> of your Garage. <br></help>
+		</div>				
+	</div><br>
+
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12">
+				<h3>Garage ceiling height:</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="dg_garage_height"></div><br>
+			</div>
+		</div>
+  		<div>
+			<help>Select the Ceiling Height for your Garage.</help>
+		</div>				
+	</div><br>
+
+
+	<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12 col-md-7">
+				<div class="row">
+					<div class="col-xs-7 col-sm-7 col-md-12">
+						<h3>What is Your Roof Slope:</h3>
+					</div>			
+					<div class="col-xs-5 col-sm-5 col-md-0 hidden-md hidden-lg text-center">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal0">					
+							<img src="images/slope.jpg" alt="Slope Examples" class="help_img_t img-rounded"/>
+								<div style="bottom: 0" class="caption post-content">
+                				<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               			</div>
+               	</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div id="dg_roof_slope"></div>					</div>
+				</div>
+  				<div>
+					<help>The slope determines how steep your roof will be. It is defined as the number of units vertical your roof rises compared to 12 units horizontal. Roof slopes can vary significantly. Typically they are in the range of 4:12 to 12:12. A common roof pitch would be around 6:12.</help>
+				</div>
+			</div>
+			<div class="col-xs-0 col-md-5 hidden-xs hidden-sm text-center">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal0">
+					<img src="images/slope.jpg" alt="Slope Examples" class="help_img img-rounded" />
+						<div style="bottom: 0" class="caption post-content">
+                		<h4 style="color: rgb(0, 83, 249);">Example</h4>
+               	</div>
+				</button>				
+			</div>
+		</div>
+			
+			</div><br>
+  <div class="modal" id="myModal0" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+    	<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Slope Examples</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/slope.jpg" class="img-responsive">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+  </div>    
+<div class="calc-input">
+		<div class="row">
+			<div class="col-xs-12">
+				<h3>What Structure Class Does Your Garage Fit:</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="dg_building_class"></div><br>
+			</div>
+		</div>
+  		<div>
+        <help>
+In order to determine the complexity of your garage (which will effect the cost), select the class that best fits your garage.<br>
+          <a href="http://www.crookstondesigns.com">See examples provided by Crookston Custom Designs</a> <br>
+<b>Structure class 1</b> is considered the most basic with no extras. Starter homes will often fit into this class or class 2.
+Typically there will only be one or two roof lines and the ceiling height will not change through out the home.<br>
+          <a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_10058.00.html">Example 1 (Class 1)</a> <br><br>
+<b>Structure class 2</b> is still a fairly simple home, but more complicated than class 1. Typically there will only be three to five
+roof lines. The ceiling height will still stay the same through out the home.<br>
+          <a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_8031.00.html">Example 1 (Class 2)</a> |
+          <a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_10007.00.html">Example 2 (Class 2)</a> <br><br>
+<b>Structure class 3</b> is intended to be a fairly typical home complexity. Typically there will be 6 to 9 roof lines. The
+ceiling height may change in one area but over all there is not much variation in roof height.<br>
+          <a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_7053.00.html">Example 1 (Class 3)</a> |
+          <a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_11012.00.html">Example 2 (Class 3)</a> <br>
+          <a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_9044.00.html">Example 3 (Class 3)</a> |
+  				<a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_8018.00.html">Example 4 (Class 3)</a> <br><br>
+<b>Structure class 4</b> is intended to be a custom home with several changes in ceiling heights through out the home. Typically there
+will be many different roof lines.<br>
+					<a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_9038.00.html">Example 1 (Class 4)</a> |
+					<a onclick="window.open(this.getAttribute('href'),'Crookston Custom Designs','location=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes,width=800,height=720');return false;" target="_blank" href="http://www.crookstondesigns.com/plan_10014.00.html">Example 2 (Class 4)</a> <br><br>
+<b>Structure class 5</b> is intended to be the most complicated custom home with many changes in ceiling heights through out the
+home. The roof will vary in height in many locations with many different roof lines.<br>
+				</help>
+		</div>				
+</div><br>
+
+<div class="calc-input">
+  <a type="button" class="btn btn-primary btn-lg btn-next" href="input2_garage.html">NEXT</a>
+		
+  <a type="button" class="btn btn-primary btn-lg btn-next" id="EndCalc">CALCULATE</a>
+  
+  <div id="power_by" class="text-center">
+    <a href="http://www.crookstondesigns.com/plans.html"><b>Choose a pre-entered plan from Crookston Custom Designs</b></a>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- End Main -->
+<br>
+  <div id="footer" class="footer">
+    <h4>
+      &copy; 2019 Cost To Build LLC &nbsp;<a href="privacypolicy.html">Privacy Policy</a>
+      <a style="float:right;" href="http://crookstondesigns.com" target="_blank">Crookston Custom Designs</a>
+    </h4>
+  </div>
+</div>
+</body>
+</html>  

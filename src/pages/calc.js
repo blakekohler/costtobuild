@@ -2,7 +2,12 @@ import React from 'react';
 import * as style from './calc.module.css'
 import Header from '../components/header';
 import Footer from "../components/footer";
+
+
 const Calc  = () => {
+
+
+  
   return <div>
   <title>House Calculator | Cost To Build</title>
   <Header></Header>

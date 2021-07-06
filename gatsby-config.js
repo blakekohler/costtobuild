@@ -38,8 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `6tl35cj995hv`,
-        accessToken: `5yv2zMwHJfQZv545oGzlR9zDNGV28ZFIGKRUzeGW41Y`
+        spaceId: `ikqzyvxm34w9`,
+        accessToken: `E3OJ9xbiKOHhSsppc8Xz4pfjINk7kPIYftA19w07Gac`
       }
     },
     "gatsby-plugin-sharp",
