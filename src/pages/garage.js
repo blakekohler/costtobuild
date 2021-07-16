@@ -3,6 +3,7 @@ import * as style from './calc.module.css'
 import Header from '../components/header';
 import Footer from "../components/footer";
 import ViewExample from "../components/viewExample";
+const module = typeof window !== `undefined` ? require("module") : null;
 
 
 const Garage  = () => {

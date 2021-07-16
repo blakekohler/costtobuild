@@ -3,6 +3,8 @@ import * as style from './calc.module.css'
 import Header from '../components/header';
 import Footer from "../components/footer";
 import cityArray from "../LocCostIdx";
+const module = typeof window !== `undefined` ? require("module") : null;
+
 const Location  = () => {
   var searchParams = new URLSearchParams(window.location.search)
   const [inputs, setInputs] = useState({

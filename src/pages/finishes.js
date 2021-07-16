@@ -4,6 +4,7 @@ import ViewExample from "../components/viewExample";
 import * as style from './calc.module.css'
 import Header from '../components/header';
 import Footer from "../components/footer";
+const module = typeof window !== `undefined` ? require("module") : null;
 
 const Finishes  = () => {
   var searchParams = new URLSearchParams(window.location.search)
