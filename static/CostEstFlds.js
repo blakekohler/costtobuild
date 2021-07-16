@@ -51,6 +51,7 @@ var Flds=[["main_floor_sf", 1000]
 ,["fire_woodstove",0,0,100,"int"]
 ,["fire_protection",{df:1,vals:["Yes","No"]}]
 ];
+
 var FrmFlds,PageRefs=["calculator","input2","input3","input4","input5","input6","input7","input8","input9","input10","estimator"];
 
 var templink;
