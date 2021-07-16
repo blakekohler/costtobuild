@@ -8,10 +8,12 @@ const CookiePopup  = () => {
       setHide(true);
     }
     useEffect(() => {
-      if (localStorage.getItem("cookieAgree") == true) {
+      if (localStorage.getItem("cookieAgree") == "true") {
+        console.log('true')
         setHide(true)
       }
       else{
+        console.log('false')
         setHide(false)
       }
     }, [])

@@ -146,3 +146,16 @@ padding-left: 5px;
     display: flex;
     justify-content: space-between;
 }
+
+.extraHelp{
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+padding-top:1px;
+margin-top: 15px;
+   background-color: lightgray;
+}
+
+.button{
+    text-decoration: none;
+}
