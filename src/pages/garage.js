@@ -3,12 +3,17 @@ import * as style from './calc.module.css'
 import Header from '../components/header';
 import Footer from "../components/footer";
 import ViewExample from "../components/viewExample";
-const module = typeof window !== `undefined` ? require("module") : null;
 
 
 const Garage  = () => {
 
+  const isBrowser = typeof window !== "undefined";
+  if (isBrowser) {
   var searchParams = new URLSearchParams(window.location.search)
+  }
+  else{
+    searchParams = { get: (key) => { return null } };
+  }
   const [inputs, setInputs] = useState({
     main_floor_sf: searchParams.get('main_floor_sf') ? searchParams.get('main_floor_sf') : 1000,
     main_floor_height: searchParams.get('main_floor_height') ? searchParams.get('main_floor_height') : 8,

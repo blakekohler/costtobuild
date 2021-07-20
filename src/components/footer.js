@@ -41,7 +41,7 @@ const Footer  = () => {
           </div>
       </div>
 <div className={style.copywriteRow}>
-© 2021 CostToBuild - Powered by Crookston Custom Designs
+© 2021 CostToBuild 
 </div>
 
 
