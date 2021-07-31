@@ -159,3 +159,151 @@ margin-top: 15px;
 .button{
     text-decoration: none;
 }
+
+.bigTotal{
+    color: #f5bf23;
+    font-size: 70pt;
+    font-weight: 700;
+    margin: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+.anchorDetails{
+    color: #222;
+    font-size: 14pt;
+    font-weight: 700;
+    margin: 5px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.anchorHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.downArrow{
+    font-weight: 100;
+    font-size: 38pt;
+    margin-top: -20px;
+}
+
+
+.planPic{
+    width: 100%;
+   
+}
+.planList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.plan{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.details{
+    padding-left: 20px;
+}
+
+.details > h4{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: x-large;
+    margin: 0;
+}
+
+.viewPlan{
+    background-color: #f5bf23;
+    color: #222;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    margin-top: 14px;
+    cursor: pointer;
+}
+
+
+.table{
+    
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: .8rem;
+    margin-top: 30px;
+    line-height: 1.5;
+    border: 1px solid #d0d0d0;
+    border-bottom: none;
+    color: #222;
+    flex: 1 1 auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.th {
+    width: 100%;
+    display: flex;
+    font-size: large;
+    flex-flow: row nowrap;
+    font-weight: 700;
+    background-color: #f5bf23;
+  }
+
+
+.th > .td {
+    white-space: normal;
+    
+  }
+  
+  .tr {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  
+  .tr:nth-of-type(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .tr:nth-of-type(odd) {
+    background-color: #ffffff;
+  }
+  
+  .td {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0.5em;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0px;
+    white-space: nowrap;
+    border-bottom: 1px solid #d0d0d0;
+  }
+
+  .trTotals{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    font-weight: 900;
+    font-size: medium;
+    background-color: #f5bf23;
+  }
